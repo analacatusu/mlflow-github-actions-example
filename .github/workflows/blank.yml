@@ -34,4 +34,4 @@ jobs:
       # Run script manually
       - name: run mlflow workflow
         run: |
-          mlflow run main.py --experiment-name Github_actions
+          python main.py
