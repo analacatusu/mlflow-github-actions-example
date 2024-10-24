@@ -23,8 +23,8 @@ MLFLOW_EXPERIMENT_NAME = os.getenv('MLFLOW_EXPERIMENT_NAME')
 print(MLFLOW_EXPERIMENT_NAME)
 print(type(MLFLOW_EXPERIMENT_NAME))
 
-mlflow.set_tracking_uri(uri='http://localhost:5001')
-mlflow.set_experiment(experiment_name="Github_actions")
+mlflow.set_tracking_uri(uri=str(MLFLOW_TRACKING_URI))
+mlflow.set_experiment(experiment_name=str(MLFLOW_EXPERIMENT_NAME))
 
 
 class MNISTModel(L.LightningModule):
