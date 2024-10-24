@@ -1,0 +1,1 @@
+use venv_general as a venv for this project.
