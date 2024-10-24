@@ -20,9 +20,11 @@ import os
 
 MLFLOW_TRACKING_URI = os.getenv('MLFLOW_TRACKING_URI')
 MLFLOW_EXPERIMENT_NAME = os.getenv('MLFLOW_EXPERIMENT_NAME')
+print(MLFLOW_EXPERIMENT_NAME)
+print(type(MLFLOW_EXPERIMENT_NAME))
 
 mlflow.set_tracking_uri(uri=MLFLOW_TRACKING_URI)
-mlflow.set_experiment(MLFLOW_EXPERIMENT_NAME)
+# mlflow.set_experiment(MLFLOW_EXPERIMENT_NAME)
 
 
 class MNISTModel(L.LightningModule):
