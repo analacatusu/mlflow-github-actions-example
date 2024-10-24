@@ -13,18 +13,21 @@ from mlflow import MlflowClient
 import os
 
 # Set our tracking server uri for logging
-mlflow.set_tracking_uri(uri="http://127.0.0.1:5001")
+# mlflow.set_tracking_uri(uri="http://127.0.0.1:5001")
 
 # Create a new MLflow Experiment
-mlflow.set_experiment("MNIST and Pytorch")
+# mlflow.set_experiment("MNIST and Pytorch")
 
-# MLFLOW_TRACKING_URI = os.getenv('MLFLOW_TRACKING_URI')
-# MLFLOW_EXPERIMENT_NAME = os.getenv('MLFLOW_EXPERIMENT_NAME')
-# print(MLFLOW_EXPERIMENT_NAME)
-# print(type(MLFLOW_EXPERIMENT_NAME))
+MLFLOW_TRACKING_URI = os.getenv('MLFLOW_TRACKING_URI')
+MLFLOW_EXPERIMENT_NAME = os.getenv('MLFLOW_EXPERIMENT_NAME')
 
-# mlflow.set_tracking_uri(uri=str(MLFLOW_TRACKING_URI))
-# mlflow.set_experiment(experiment_name=str(MLFLOW_EXPERIMENT_NAME))
+print(MLFLOW_TRACKING_URI)
+print(type(MLFLOW_TRACKING_URI))
+print(MLFLOW_EXPERIMENT_NAME)
+print(type(MLFLOW_EXPERIMENT_NAME))
+
+mlflow.set_tracking_uri(uri=str(MLFLOW_TRACKING_URI))
+mlflow.set_experiment(experiment_name=str(MLFLOW_EXPERIMENT_NAME))
 
 
 class MNISTModel(L.LightningModule):
