@@ -24,7 +24,7 @@ print(MLFLOW_EXPERIMENT_NAME)
 print(type(MLFLOW_EXPERIMENT_NAME))
 
 mlflow.set_tracking_uri(uri=MLFLOW_TRACKING_URI)
-# mlflow.set_experiment(MLFLOW_EXPERIMENT_NAME)
+mlflow.set_experiment(experiment_name="Github_actions")
 
 
 class MNISTModel(L.LightningModule):
