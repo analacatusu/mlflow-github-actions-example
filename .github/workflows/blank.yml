@@ -19,8 +19,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     env:
-        MLFLOW_EXPERIMENT_NAME: ${{env.MLFLOW_EXPERIMENT_NAME}}
-        MLFLOW_TRACKING_URI: ${{env.MLFLOW_TRACKING_URI}}
+        MLFLOW_EXPERIMENT_NAME: ${{vars.MLFLOW_EXPERIMENT_NAME}}
+        MLFLOW_TRACKING_URI: ${{vars.MLFLOW_TRACKING_URI}}
         
     runs-on: ubuntu-latest
 
