@@ -18,6 +18,8 @@ jobs:
     env:
         MLFLOW_EXPERIMENT_NAME: ${{vars.MLFLOW_EXPERIMENT_NAME}}
         MLFLOW_TRACKING_URI: ${{vars.MLFLOW_TRACKING_URI}}
+        MLFLOW_TRACKING_USERNAME: ${{vars.MLFLOW_TRACKING_USERNAME}}
+        MLFLOW_TRACKING_PASSWORD: ${{vars.MLFLOW_TRACKING_PASSWORD}}
         
     runs-on: ubuntu-latest
 
